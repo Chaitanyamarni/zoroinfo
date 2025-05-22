@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 com_garena_msdk_uid = "3926893061"
 com_garena_msdk_password = "zorolikesapiNUMRSAN1"
-com_jwt_generate_url = "https://akiru-jwt.vercel.app/token"
+com_jwt_generate_url = "https://jwtgen.vercel.app/token"
 
 
 
