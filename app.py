@@ -96,7 +96,7 @@ def index():
     return jsonify({
         "FF Information": [
             {
-                "credits": "Ujjaiwal"
+                "credits": "ZORO"
             }
         ]
     })
@@ -108,7 +108,7 @@ def get_player_info():
         key = request.args.get('key')
         region = request.args.get('region')
 
-        valid_key = "1yearkeysforujjaiwal"
+        valid_key = "zoro"
 
         # Required fields check
         if not player_id or not key or not region:
