@@ -9,13 +9,10 @@ import json
 
 app = Flask(__name__)
 
-com_garena_msdk_uid = "3926893061"
-com_garena_msdk_password = "zorolikesapiNUMRSAN1"
+
+com_garena_msdk_uid = "3926304423"
+com_garena_msdk_password = "zoro_2NPLSJNWOFR9LJJGVHEP"
 com_jwt_generate_url = "https://jwtgen.vercel.app/token"
-
-
-
-
 
 def get_jwt():
     try:
@@ -24,13 +21,15 @@ def get_jwt():
             'password': com_garena_msdk_password
         }
         response = requests.get(com_jwt_generate_url, params=params)
+        print(response.text)  # DEBUG: print full response
         if response.status_code == 200:
             jwt_data = response.json()
-            return jwt_data.get("Starexx", [{}])[0].get("Token")
+            return jwt_data.get("token")  # Adjust this key based on your generator
         return None
     except Exception as e:
         print(f"Error fetching JWT: {e}")
         return None
+
         
 def Encrypt_ID(x):
     x = int(x)
